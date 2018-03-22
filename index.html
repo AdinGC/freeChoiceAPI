@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Free Choice API</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <link type="text/css" rel='stylesheet' href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+<select id="cleanOrDirty">
+    <option value="1">clean</option>
+    <option value="2">explicit</option>
+</select>
+<br>
+<button id="newDef" class="btn btn-primary btn-lg">New Definition</button>
+<span class="disp">Your Definition:</span> <div class=disp id="displayDef"></div>
+<!--Your Guess:<input type="text" id="wordGuess" value="" size="25">-->
+<button id="submitGuess" class="btn btn-primary disp">Submit Guess</button>
+<select id="wordOptions"></select>
+
+<div id="winOrLose" class="disp"></div>
+<div id="guesses" class="disp"></div>
+
+
+</body>
+</html>
