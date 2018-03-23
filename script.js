@@ -1,7 +1,12 @@
 var word="";
-var wordBankClean=["A crapella","Bromance","ghost ride","Masterdate"];
-var wordBankExplicit=["thicc","peeker","Cock block","Masterdate"];
+var wordBankClean=["A crapella","Bromance","ghost ride","Masterdate","this one","hocking loogies","Trumpillion","Abercrombie and Fitch"];
+var wordBankClean2=["A crapella","Bromance","ghost ride","Masterdate","this one","hocking loogies","Trumpillion","Abercrombie and Fitch"];
+
+var wordBankExplicit=["thicc","peeker","Cock block","Masterdate","squashing","Marshmallowing"," supermanning"];
+var wordBankExplicit2=["thicc","peeker","Cock block","Masterdate","squashing","Marshmallowing"," supermanning"];
+
 var num=0
+
 
 
 $(document).ready(function (){
@@ -31,39 +36,47 @@ $(document).ready(function (){
     //PROCESS guess
     $('#submitGuess').on('click',function() {
         var wordGuess=$('#wordOptions').val();
+        var guesses=0
         $('#winOrLose').html('');
 
         console.log(wordGuess);
         if(wordGuess==num){
             console.log("sucess");
-            $('#winOrLose').append('That is correct!')
+            $('#winOrLose').append('That is correct!');
         }else{
-            $('#winOrLose').append('That is incorrect')
+            $('#winOrLose').append('That is incorrect');
+            guesses+=1
+            $('#guesses').append(guesses);
+
+
         }
         
     });
+
 });
 
 //chooses word from clean or dirty array
 function chooseWord(){
     if($('#cleanOrDirty').val()==1){
-        arr=wordBankClean
+        arr1=wordBankClean;
+        arr2=wordBankClean2
     }else{
-        arr=wordBankExplicit
+        arr1=wordBankExplicit;
+        arr2=wordBankExplicit2
     };
-    num= Math.floor(Math.random() * ((arr.length-1) - 0 + 1)) + 0;
+    num= Math.floor(Math.random() * ((arr1.length-1) - 0 + 1)) + 0;
     console.log(num);
-    word=arr[num];
+    word=arr1[num];
     console.log(word);
-    console.log(arr);
-    arr.splice(num,1);
-    console.log(arr);
+    console.log(arr1);
+    arr1.splice(num,1);
+    console.log(arr1);
 
 }
 
 function getDef(result){
-    console.log(result.list[1].definition);
-    var def1=result.list[1].definition;
+    console.log(result.list[0].definition);
+    var def1=result.list[0].definition;
     console.log(def1);
     $('#displayDef').html(def1);
 
@@ -73,8 +86,8 @@ function getDef(result){
 //generates drop down
 function dropDown() {
     document.getElementById("wordOptions").innerHTML = "asdf";
-    for (var i = 0; i < (arr.length); i++) {
-        var string = '<option value=' + i + '>' + arr[i] + '</option>';
+    for (var i = 0; i < (arr2.length); i++) {
+        var string = '<option value=' + i + '>' + arr2[i] + '</option>';
         document.getElementById("wordOptions").innerHTML += string;
     }
 }
