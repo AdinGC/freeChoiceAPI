@@ -9,19 +9,25 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
-<select id="cleanOrDirty">
+
+<span class="disp">Select Explicitness Settings</span> <select id="cleanOrDirty">
     <option value="1">clean</option>
     <option value="2">explicit</option>
 </select>
 <br>
-<button id="newDef" class="btn btn-primary btn-lg">New Definition</button>
+<!--starts game-->
+<button id="launch" class="btn btn-primary disp">Start New Game</button>
+<br>
+
+<!--<button id="newDef" class="btn btn-primary btn-lg">New Definition</button>-->
 <span class="disp">Your Definition:</span> <div class=disp id="displayDef"></div>
 <!--Your Guess:<input type="text" id="wordGuess" value="" size="25">-->
 <button id="submitGuess" class="btn btn-primary disp">Submit Guess</button>
 <select id="wordOptions"></select>
-
 <div id="winOrLose" class="disp"></div>
-<div id="guesses" class="disp"></div>
+<span class="disp">Correct Guesses</span> <div id="correctGuesses" class="disp"></div>
+<span class="disp"> Incorrect Guesses</span> <div id="incorrectGuesses" class="disp"></div>
+
 
 
 </body>
