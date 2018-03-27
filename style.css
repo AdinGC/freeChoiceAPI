@@ -2,9 +2,22 @@ body{
     text-align: center;
     text-decoration-color: whitesmoke;
     background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxXVav_kYbT8umYhpcSmbI51Tes6-azPIjASedyMzr5OppmkPnEg);
+
 }
-.disp{
+
+.disp {
     color: white;
     font-size: 30px
 }
+
+
+#table{
+    border-color: white;
+    border-width: thick;
+}
+
+#sub{
+    margin-top: 200px;
+}
+
 

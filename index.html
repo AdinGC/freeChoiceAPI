@@ -14,20 +14,39 @@
     <option value="1">clean</option>
     <option value="2">explicit</option>
 </select>
-<br>
+
 <!--starts game-->
 <button id="launch" class="btn btn-primary disp">Start New Game</button>
+<br>
+<br>
 <br>
 
 <!--<button id="newDef" class="btn btn-primary btn-lg">New Definition</button>-->
 <span class="disp">Your Definition:</span> <div class=disp id="displayDef"></div>
 <!--Your Guess:<input type="text" id="wordGuess" value="" size="25">-->
-<button id="submitGuess" class="btn btn-primary disp">Submit Guess</button>
-<select id="wordOptions"></select>
-<div id="winOrLose" class="disp"></div>
-<span class="disp">Correct Guesses</span> <div id="correctGuesses" class="disp"></div>
-<span class="disp"> Incorrect Guesses</span> <div id="incorrectGuesses" class="disp"></div>
+<div id="sub">
+    <button id="submitGuess" class="btn btn-primary disp submitGuess">Submit Guess</button>
+    <select class="submitGuess" id="wordOptions"></select>
+</div>
 
+<div id="winOrLose" class="disp"></div>
+<!--<span class="disp">Correct Guesses</span> <div id="correctGuesses" class="disp"></div>-->
+<!--<span class="disp"> Incorrect Guesses</span> <div id="incorrectGuesses" class="disp"></div>-->
+<div class=disp id="empty"></div>
+<table class=disp id="table">
+    <tr>
+        <th>correct </th>
+        <td id="correctGuesses"> </td>
+    </tr>
+    <tr>
+        <th>incorrect </th>
+        <td id="incorrectGuesses"> </td>
+
+    </tr>
+
+</tab>
+
+</table>
 
 
 </body>

@@ -1,6 +1,6 @@
 var word="";
-var wordBankClean=["A crapella","Bromance","ghost ride","Masterdate","this one","hocking loogies","Trumpillion","Abercrombie and Fitch"];
-var wordBankClean2=["A crapella","Bromance","ghost ride","Masterdate","this one","hocking loogies","Trumpillion","Abercrombie and Fitch"];
+var wordBankClean=["A crapella",];
+var wordBankClean2=["A crapella"];
 
 var wordBankExplicit=["thicc","peeker","Cock block","Masterdate","squashing","Marshmallowing"," supermanning"];
 var wordBankExplicit2=["thicc","peeker","Cock block","Masterdate","squashing","Marshmallowing"," supermanning"];
@@ -24,35 +24,41 @@ $(document).ready(function (){
     });
     //PROCESS guess
     $('#submitGuess').on('click',function() {
-        var wordGuess=$('#wordOptions').val();
-        var processedguess= arr2[wordGuess];
+            var wordGuess = $('#wordOptions').val();
+            var processedguess = arr2[wordGuess];
 
 
-        $('#winOrLose').html('');
+            $('#winOrLose').html('');
 
-        console.log(processedguess);
-        console.log(num);
-        console.log(arr1[num]);
-        if(processedguess==arr1[num]){
-            $('#winOrLose').append('That is correct!');
-            correctGuesses+=1;
-            arr1.splice(num,1);
-            all();
-        }else{
-            $('#winOrLose').append('That is incorrect');
-            incorrectGuesses+=1;
-
-
+            console.log(processedguess);
+            console.log(num);
+            console.log(arr1[num]);
+            if (processedguess == arr1[num]) {
+                $('#winOrLose').append('That is correct! Look above for your new definition');
+                correctGuesses += 1;
+                arr1.splice(num, 1);
+                all();
+            } else {
+                $('#winOrLose').append('That is incorrect, try guessing again');
+                incorrectGuesses += 1;
 
 
-        }
-        $('#correctGuesses').html(correctGuesses);
-        $('#incorrectGuesses').html(incorrectGuesses);
-    });
+            }
+            $('#correctGuesses').html(correctGuesses);
+            $('#incorrectGuesses').html(incorrectGuesses);
+
+
+
+
+
+
+
+    })
 });
 
 
 function all(){
+
     chooseWord();
     dropDown();
 
@@ -84,6 +90,7 @@ function all(){
 
 //chooses word from clean or dirty array
 function chooseWord(){
+
     if($('#cleanOrDirty').val()==1){
         arr1=wordBankClean;
         arr2=wordBankClean2
@@ -101,10 +108,16 @@ function chooseWord(){
 }
 
 function getDef(result){
-    console.log(result.list[0].definition);
-    var def1=result.list[0].definition;
-    console.log(def1);
-    $('#displayDef').html(def1);
+    if(arr1.length<1) {
+        $("#empty").html("You have guessed all the words. Thank you for playing");
+        $('#displayDef').html("Game Over");
+    }else{
+        console.log(result.list[0].definition);
+        var def1=result.list[0].definition;
+        console.log(def1);
+        $('#displayDef').html(def1);
+    }
+
 
 
 }
