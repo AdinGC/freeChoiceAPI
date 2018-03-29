@@ -2,7 +2,7 @@ body{
     text-align: center;
     text-decoration-color: whitesmoke;
     background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxXVav_kYbT8umYhpcSmbI51Tes6-azPIjASedyMzr5OppmkPnEg);
-
+    font-weight: 100;
 }
 
 .disp {
@@ -12,8 +12,11 @@ body{
 
 
 #table{
-    border-color: white;
+    width:50px;
     border-width: thick;
+    border-color:white ;
+    text-align:center;
+
 }
 
 #sub{

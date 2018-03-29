@@ -1,9 +1,13 @@
 var word="";
-var wordBankClean=["A crapella",];
-var wordBankClean2=["A crapella"];
+var wordBankClean=["A crapella","Bromance","ghost ride","this one","Trumpillion","White Walling","Lit","Fam"];
+var wordBankClean2=["A crapella","Bromance","ghost ride","this one","Trumpillion","White Walling","Lit","Fam"];
 
-var wordBankExplicit=["thicc","peeker","Cock block","Masterdate","squashing","Marshmallowing"," supermanning"];
-var wordBankExplicit2=["thicc","peeker","Cock block","Masterdate","squashing","Marshmallowing"," supermanning"];
+var wordBankExplicit=["thicc","peeker","Cock block","Masterdate","squashing","Marshmallowing"," supermanning","Cumberbatch","Taint","Tallahassee Gas Mask","reverse eiffel tower"];
+var wordBankExplicit2=["thicc","peeker","Cock block","Masterdate","squashing","Marshmallowing"," supermanning","Cumberbatch","Taint","Tallahassee Gas Mask","reverse eiffel tower"];
+
+
+
+
 
 var num=0
 
