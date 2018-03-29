@@ -19,6 +19,11 @@ var correctGuesses=0;
 
 $(document).ready(function (){
     $('#launch').on('click',function() {
+        wordBankClean=["A crapella","Bromance","ghost ride","this one","Trumpillion","White Walling","Lit","Fam"];
+        wordBankClean2=["A crapella","Bromance","ghost ride","this one","Trumpillion","White Walling","Lit","Fam"];
+        wordBankExplicit=["thicc","peeker","Cock block","Masterdate","squashing","Marshmallowing"," supermanning","Cumberbatch","Taint","Tallahassee Gas Mask","reverse eiffel tower"];
+        wordBankExplicit2=["thicc","peeker","Cock block","Masterdate","squashing","Marshmallowing"," supermanning","Cumberbatch","Taint","Tallahassee Gas Mask","reverse eiffel tower"];
+
         incorrectGuesses=0;
         correctGuesses=0;
         $('#correctGuesses').html(correctGuesses);
@@ -28,11 +33,13 @@ $(document).ready(function (){
     });
     //PROCESS guess
     $('#submitGuess').on('click',function() {
-            var wordGuess = $('#wordOptions').val();
-            var processedguess = arr2[wordGuess];
+
+        var wordGuess = $('#wordOptions').val();
+        var processedguess = arr2[wordGuess];
 
 
-            $('#winOrLose').html('');
+
+        $('#winOrLose').html('');
 
             console.log(processedguess);
             console.log(num);
